@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Minduola Login Page Test Suite">
+
+
+
+	<test name="Login Page Test Cases">
+		<classes>
+			<class name="com.mindoula.test.TestCareExtenders"></class>
+		</classes>
+	</test>
+</suite>
