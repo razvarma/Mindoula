@@ -39,3 +39,5 @@ jobs:
         
       # run tests!
       - run: mvn integration-test
+      
+      - image: selenium/standalone-chrome:3.1.0
