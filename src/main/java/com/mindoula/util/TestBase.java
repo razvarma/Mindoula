@@ -11,33 +11,21 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import com.mindoula.config.*;
-import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.model.Test;
 import com.cucumber.listener.Reporter;
-//import com.cucumber.listener.Reporter;
-import com.relevantcodes.extentreports.LogStatus;
-
-import gherkin.formatter.model.Result;
 
 public class TestBase {
 
 	public static WebDriver driver;
 	public  Properties prop, objProp;
 	public  WebDriverWait wait;
-	//public  CustomeExtent ce;
-	private boolean initialized = false;
+
 	
 	public TestBase()
 	{
