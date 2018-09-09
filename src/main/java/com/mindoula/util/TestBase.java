@@ -52,7 +52,7 @@ public void init() {
 		{
 		String browsername = prop.getProperty("browser");
 		if (browsername.toUpperCase().equals("CHROME")) {
-			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "//src//main//resources//chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "//src//main//resources//chromedriver");
 			driver = new ChromeDriver();
 		} else if (browsername.toUpperCase().equals("FIREFOX")) {
 			driver = new FirefoxDriver();
