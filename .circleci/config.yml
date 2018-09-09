@@ -4,7 +4,21 @@
 #
 version: 2
 jobs:
+
   build:
+    docker:
+      - image: circleci/node-jessie-browsers
+    steps:
+      - checkout
+      - run: mkdir test-reports
+      - run:
+          name: Download Selenium
+          command: curl -O http://selenium-release.storage.googleapis.com/3.5/selenium-server-standalone-3.5.3.jar
+      - run:
+          name: Start Selenium
+          command: java -jar selenium-server-standalone-3.5.3.jar -log test-reports/selenium.log
+          background: true
+  test:
     docker:
       # specify the version you desire here
       - image: circleci/openjdk:8-jdk
@@ -40,3 +54,14 @@ jobs:
       # run tests!
       - run: mvn integration-test
  
+ workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
+      - test:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
