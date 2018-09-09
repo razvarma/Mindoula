@@ -36,7 +36,7 @@ public class TestBase {
 	public static WebDriver driver;
 	public  Properties prop, objProp;
 	public  WebDriverWait wait;
-	public  CustomeExtent ce;
+	//public  CustomeExtent ce;
 	private boolean initialized = false;
 	
 	public TestBase()
