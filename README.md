@@ -15,4 +15,4 @@ How to Run a Test:
 2. You can see all the TestRunner classes
 3. Open a TestRunner Class you can see the feature file that you are running with that TestRunner
 4. You can change the feature file or you can use the similar test runner class to run a different feature file
-5. Right Click on the TestRunner class and use Run As->TestNG test
+5. Right Click on the TestRunner class and use Run As->TestNG test#MindoulaNew
